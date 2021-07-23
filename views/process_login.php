@@ -13,10 +13,10 @@
         $result = mysqli_query($con, $query);
         $rows = mysqli_num_rows($result);
         if ($rows == 1) {
-            $_SESSION['username'] = $userName;
-            header("Location: home.php");
+            $_SESSION["user"] = $userName;
+            header("location: home.php");
         } else {
-            header("Location: login.php?login=error");
+            header("location: login.php?login=error");
         }
     }
 ?>

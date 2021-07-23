@@ -53,8 +53,3 @@
 </body>
 
 </html>
-
-
-
-
-<!-- font-family: "Montserrat", sans-serif; font-family: "Akaya Kanadaka", cursive; -->

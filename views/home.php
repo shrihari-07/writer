@@ -36,6 +36,7 @@ if (!isset($_SESSION["user"])) {
                 </div>
                 <div class="home-nav-items">
                     <a style="color: black;" href="home.php"><img src="../public/assets/home.png"></img></a>
+                    <a style="color: black;" href="create_post.php"><img src="../public/assets/plus-sign.png"></img></a>
                     <a style="color: black;" href="user.php"><img src="../public/assets/user.png"></img></a>
                 </div>
             </div>
