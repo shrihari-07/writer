@@ -6,7 +6,6 @@
         $query = "INSERT INTO users VALUES ('" . $_POST['email'] . "', 
             '" . $_POST['username'] . "', '" . $_POST['password'] . "')";
         $result = mysqli_query($con, $query);
-        echo $result;
         $_SESSION["user"] = $_POST["username"];
         header("location:home.php");
     } else {

@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+#home-container {
+  height: 100%;
+}
+
+.home-nav-bar {
+  background-color: white;
+  display: flex;
+  height: 60px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex: 0.7;
+}
+
+.logo > a {
+  font-size: 2.3rem;
+  margin-left: 200px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  font-family: "Akaya Kanadaka", cursive;
+  opacity: 0.7;
+}
+
+.home-nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0.3;
+}
+
+.home-nav-items > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.home-nav-items > a > img {
+  height: 25px;
+  margin: 0 13px 0 13px;
+}
+
+.user-post-container {
+  height: 92%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+}
+
+.user-post-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.post {
+  height: 590px;
+  width: 550px;
+  margin: 30px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.username > img {
+  margin: 0 13px 0 17px;
+}
+
+.username > p {
+  font-size: 1.3rem;
+}
+
+.post-image {
+  height: 319px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.post-image > img {
+  height: 319px;
+  width: 100%;
+}
+
+.blog-text {
+  height: 221px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.blog-text > p {
+  line-height: 1.5;
+  margin: 20px 20px 10px 20px;
+}
+
+.blog-text > button {
+  color: #43a1f2;
+  background-color: #fff;
+  font-weight: bold;
+  margin: 10px 20px 20px 20px;
+  font-size: 15px;
+  border: 1px solid;
+  height: 35px;
+  width: 110px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-text > button:hover {
+  background-color: #43a1f2;
+  color: #fff;
+}
+
+.no-posts {
+  margin: 70px;
+  opacity: 0.4;
+}

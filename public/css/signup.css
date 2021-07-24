@@ -20,6 +20,7 @@ body {
 .signup-inner-div {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 12px;
   width: 350px;
   height: 420px;
   background-color: #ffffff;
@@ -89,7 +90,7 @@ input {
   opacity: 0.4;
 }
 
-.terms > p{
+.terms > p {
   margin-bottom: 0;
 }
 
@@ -100,6 +101,7 @@ input {
 .signup-account-div {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
     rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 12px;
   height: 60px;
   width: 350px;
   display: flex;
@@ -109,6 +111,6 @@ input {
   opacity: 0.7;
 }
 
-.signup-account-div > p{
+.signup-account-div > p {
   margin-bottom: 0;
 }

@@ -34,22 +34,22 @@ if (!isset($_SESSION["user"])) {
             </div>
             <div class="create-post-body">
                 <div class="blog-vector-img">
-                    <img src="../public/assets/Stuck at Home - To Do List.png" />
+                    <img src="../public/assets/Stuck at Home - To Do List.png" alt="person standing beside a notepad" />
                 </div>
                 <div class="create-post-form">
-                    <form action="process_create_post.php" method="post">
+                    <form action="process_create_post.php" method="post" enctype="multipart/form-data">
                         <?php echo "<h2>Hello " . $_SESSION["user"] . " ...</h2>"; ?>
                         <div class="mb-4 mt-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="title" placeholder="">
+                            <input type="text" class="form-control" id="title" name="title" required>
                         </div>
                         <div class="mb-4">
                             <label for="formFile" class="form-label">Upload image</label>
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" name="blogImage" id="formFile">                        
                         </div>
                         <div class="mb-4">
                             <label for="blog-textarea" class="form-label">Type the blog text</label>
-                            <textarea class="form-control" id="blog-textarea" rows="7"></textarea>
+                            <textarea class="form-control" id="blog-textarea" name="blogText" rows="7" required></textarea>
                         </div>
                         <button type="submit">Post</button>
                         <button type="reset">Reset</button>
