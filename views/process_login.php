@@ -1,22 +1,24 @@
  <?php
     require('mysql_connection.php');
     session_start();
-    // When form submitted, check and create user session.
-    if (isset($_POST['username'])) {
-        $userName = stripslashes($_REQUEST['username']);    // removes backslashes
-        $userName = mysqli_real_escape_string($con, $userName);
-        $password = stripslashes($_REQUEST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        // Check user is exist in the database
-        $query    = "SELECT * FROM users WHERE username='".$userName."'
-                     AND password='".$password."'";
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $query = "SELECT password FROM users WHERE username='" . $_POST['username'] . "'";
         $result = mysqli_query($con, $query);
-        $rows = mysqli_num_rows($result);
-        if ($rows == 1) {
-            $_SESSION["user"] = $userName;
-            header("location: home.php");
+        $row = mysqli_fetch_assoc($result);
+        if (mysqli_num_rows($result) == 1) {
+            if (password_verify($_POST['password'], $row['password'])) {
+                $_SESSION["user"] = $_POST['username'];
+                header("Location: home.php");
+            } else {
+                $_SESSION["wrongCredentials"] = true;
+                header("Location: login.php");
+            }
         } else {
-            header("location: login.php?login=error");
+            $_SESSION["wrongCredentials"] = true;
+            header("Location: login.php");
         }
+    } else {
+        echo "<h1>404 Page not found</h1>";
     }
-?>
+    ?>

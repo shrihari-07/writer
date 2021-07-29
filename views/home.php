@@ -39,8 +39,8 @@ if (!isset($_SESSION["user"])) {
                     <a href="create_post.php">
                         <img src="../public/assets/plus-sign.png" alt="plus-sign" />
                     </a>
-                    <a href="user.php">
-                        <img src="../public/assets/user.png" alt="user-avatar" />
+                    <a href="logout.php">
+                        <img src="../public/assets/log-out.png" alt="log-out" />
                     </a>
                 </div>
             </div>
@@ -54,15 +54,21 @@ if (!isset($_SESSION["user"])) {
                 ?>
                         <div class="post">
                             <div class="username">
-                                <img style="height: 25px;" src="../public/assets/user.png" alt="user-avatar" />
-                                <p><?php echo $row["username"] ?></p>
+                                <div class="user-info">
+                                    <img style="height: 25px;" src="../public/assets/user.png" alt="user-avatar" />
+                                    <p><?php echo $row["username"] ?></p>
+                                </div>
+                                <p><?php echo $row["blogDate"] ?></p>
                             </div>
-                            <div class="post-image">
+                            <div class="post-image">                  
                                 <img src="../uploads/<?php echo $row["imageName"] ?>" />
                             </div>
                             <div class="blog-text">
+                                <a href="user_blog.php?id=<?php echo $row['id'] ?>">
+                                    <h3><?php echo $row["title"] ?></h3>
+                                </a>
                                 <p><?php echo $truncatedBlog ?> .....</p>
-                                <button href="home.php">Read More</button>
+                                <a href="user_blog.php?id=<?php echo $row['id'] ?>"><button href="home.php">Read More</button></a>
                             </div>
                         </div>
                     <?php
