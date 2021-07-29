@@ -100,7 +100,6 @@
         <div class="col-lg-12">
           <h4>
             To contact the developers
-            <!-- <a class="blue" href="mailto:email@domain.com">satishsajjan4564@gmail.com</a> -->
           </h4>
           <div class="social-container">
             <span class="fa-stack">
